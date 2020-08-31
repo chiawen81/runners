@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 110 110" style="enable-background:new 0 0 110 110;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
+</style>
+<g>
+	<g>
+		<defs>
+			<rect id="SVGID_1_" x="-1000.7" y="-746.7" width="95.5" height="95.5"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g id="Mask_Group_7" transform="translate(-1008 -755)" class="st0">
+			<path id="user-login" d="M1063,811c13.2,0,23.9-10.7,23.9-23.9s-10.7-23.9-23.9-23.9s-23.9,10.7-23.9,23.9S1049.8,811,1063,811z
+				 M1079.7,817h-3.1c-8.6,4-18.6,4-27.2,0h-3.1c-13.8,0-25.1,11.2-25.1,25.1v7.8c0,4.9,4,9,9,9h65.7c4.9,0,9-4,9-9V842
+				C1104.8,828.2,1093.6,817,1079.7,817z"/>
+		</g>
+	</g>
+</g>
+<path id="user-login_1_" class="st1" d="M55,55c13.8,0,25-11.2,25-25S68.8,5,55,5S30,16.2,30,30S41.2,55,55,55z M72.5,61.3h-3.3
+	c-9,4.2-19.4,4.2-28.5,0h-3.3C23,61.3,11.3,73,11.3,87.5v8.1c0,5.2,4.2,9.4,9.4,9.4h68.8c5.2,0,9.4-4.2,9.4-9.4v-8.1
+	C98.7,73,87,61.3,72.5,61.3z"/>
+</svg>
