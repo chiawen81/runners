@@ -1,0 +1,477 @@
+/* --============================整體元素==============================-- */
+
+.body{
+    box-sizing: border-box;   
+}
+
+h1,h2,h3,h4,h5,h6,p,blockquote,form,fieldset{margin:0;}
+h1{font-size:2.55rem;}  /*32pt，42px*/
+h2{font-size:2.3rem;}  /*28pt， 37px，*/
+h3{font-size:1.5rem;}  /*18pt，24px*/
+h4{font-size:1.2rem;}  /*14pt，19px*/
+h5{font-size:1rem;}  /*12pt，16px*/
+h6{font-size:0.8rem;}  /*10pt，13px*/
+p{font-size:1.125rem;}  /*13.5pt，18px*/
+
+.container{
+    background-color: white;
+    margin: 0 auto;
+    font-family: 微軟正黑體,Arial, Helvetica, sans-serif;
+}
+/* --============================共用元素==============================-- */
+
+/*-----頁籤-----*/
+.tab{
+    width: 300px;
+    height:auto ;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0px 0px 25px 0px;
+}
+
+.tabh2{
+    display: inline-block;
+    font-size: 2.3rem;
+    color: #4D5057;
+    margin: 0 0;
+}
+
+.tabline{
+    width: 40px;
+    height: 5px;
+    border-radius: 2px;
+    margin: 0 auto;
+    background-color: #4D5057;
+}   /*--頁籤結束--*/
+/* --============================細項==============================-- */
+/* -------------------------header CSS------------------------- */
+header{
+    right: 0;     /*滿版設定*/
+    left: 0;
+    padding:0px 100px 30px 100px;
+    height: 60px;
+    background-color: #046ABB;
+    margin: 0 auto;
+    font-family: 微軟正黑體,Arial, Helvetica, sans-serif;  
+    position: fixed;   /*加了外掛後置頂*/
+    top: 0;           
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.25);
+    margin-bottom: 50px;
+}
+
+.logo{
+    width: 180px;
+    height: 35.12px;
+    cursor: pointer;
+}
+/*-----選單------*/
+.mainmenu{
+    flex-grow: 1;
+    /* padding-top: 5px; */
+    margin-left: 30px;
+}
+.mainmenu ul{
+    display: flex;
+}
+.mainmenu ul li{
+    display: block;
+    margin: 0 15px;
+    padding: 15px 0 0 0;
+}
+/* -------------預設該頁---------- */
+#thispage{
+    z-index: 99;
+    /* margin-top: -15px; */
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 18px;
+    background-color: #EDEDED;
+}
+#thispagetext{
+    color: #046ABB;
+}
+.mainmenu ul li a{
+    text-decoration: none;
+    color:white;
+    margin: auto 0;
+    display: flex;
+    align-self: center;
+}
+.mainmenu ul li a:active{
+    color:#046ABB;
+}
+.mainmenu ul li a:hover{
+    color:#77CD28;
+}
+/*-----註冊登入------*/
+.login{
+    max-width: 120px;
+    max-height: 40px;
+    margin-right: -30px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.login img{
+    width: 30%;
+    margin: 0 10px;
+}
+.loginmobile{
+    max-width:  40px;
+    max-height: 40px;
+    margin: 0 10px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.loginmobile img{
+    width: 100%;
+    display: none;
+}
+
+
+
+/* -------------------------area1 主視覺 CSS------------------------- */
+.area1{
+    max-width: 1110px;
+    height: 607px;
+    background: url("../pic/runner_new.jpg") center center;
+    object-fit:cover;
+    position: relative;
+    margin-top: 100px;
+    margin:100px auto 0;
+    animation-delay:0s;
+    animation: area1 1s;
+}
+@keyframes area1 {
+  from {
+    transform: translateY(-500px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+/* --左區塊-- */
+.lefttext{
+    /* display: inline-block; */
+    width: 379px;
+    height: 60px;
+    background-color: rgba(4, 105, 187, 0.7);
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-delay:1s;
+}
+
+/* --右區塊-- */
+.rightbox{
+    max-width: 570px;
+    height: 90px;
+    background-color: rgba(77, 80, 87, 0.7);
+    color: white;
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    animation-delay:1.5s;
+}
+.rightbox a{
+    font-size: 1rem;
+    background-color: #77CD28;
+    width: 120px;
+    height: 40px;
+    outline: none;
+    border: none;
+}
+.rightbox a:visited{    /* --按鈕狀態-- */
+    outline: none;
+    border: none;
+}
+.rightbox a:active{
+    background-color:#046ABB;
+    color: white;
+    outline: none;
+    border: none;
+}
+/* ----------area1 RWD-------- */
+@media screen  and (max-width:995px ){
+    .area1{
+        background: url("../pic/runner_new.jpg") center left;
+    }
+}
+@media screen  and (max-width:576px ){
+    .area1 h1{
+        font-size: 1.5rem;
+        height: 60px;
+        line-height: 3.5rem;
+
+    }
+    .area1 h3{
+        font-size: 1.2rem;
+        /* height: 45px; */
+    }
+    .rightbox{
+        height: 75px;
+
+    }
+    .lefttext{
+        height: 45px;
+    }
+}
+
+
+
+/* -------------------------area2 課程資訊CSS------------------------- */
+.area2{
+    margin-top: 100px;
+
+}
+.area2down{
+    /* margin-top: 50px; */
+    display: flex;
+    justify-content: space-between;
+}
+.card1{
+    max-width: 280px;
+    max-height: 170px;
+    display: flex;
+    justify-content: space-between;
+    /* margin: 0 20px; */
+}
+.card1left{
+    width: 128px;
+}
+.card1right{
+    height: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 0 0 0;
+    /* position: relative; */
+
+}
+/* --卡片小標-- */
+.card1right-up{
+    max-width:100px ;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    /* position: absolute;
+    top: 0; */
+}
+.card1right-up h3{
+    position: relative;
+    z-index: 2;
+}
+.card1tab{  /* --綠頁籤-- */
+    width: 100px;
+    height: 15px;
+    background-color: #419B00;
+    position: absolute;
+    top: 30%;
+    z-index: 0;
+}
+/* --卡片資訊-- */
+.card1right-down{
+    max-width:180px ;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* position: absolute;
+    bottom: 0;
+    left: -8%; */
+}
+.card1right-down p {
+    max-width:180px ;
+}
+/* ------------課程資訊RWD------- */
+@media screen and (max-width:1000px ){
+    .area2down{
+    flex-direction: column;
+    align-items: center;
+}  
+    .card1{
+        margin-top: 30px;
+    }
+}
+
+
+
+/* -------------------------area3 特色與目標 CSS------------------------- */
+.area3{
+    margin-top: 100px;
+}
+                    /* ---------下方區--------- */
+.area3down{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.area3kv{
+    background: url("../pic/跑班特色3_new3.jpg") center center no-repeat;
+    max-width: 1110px;
+    height: 405px;
+    animation-delay: 0s;
+}
+/* -----------JQ特效------ */
+#move1-1, .move1-1{
+    display: none;
+}
+.area3card2box
+/* -------下方區小卡------- */
+.area3card2box{   /*取出小卡間距*/
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+
+}
+.card2box{
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+}
+    /* --單張小卡-- */
+.card2{
+    display: flex;
+    max-width: 475px;
+    /* margin-bottom: 36.5px; */
+}
+.card2tab{
+    width: 100%;
+    z-index: 4;
+
+}
+.card2 h3{
+    margin-left: -67%;
+    margin-top: 4%;
+    display: inline-block;
+    left: 0;
+    z-index: 5;
+}
+    /* --小卡效果(特色說明)-- */
+.card2text{
+    background-color: #419B00;
+    max-width: 300px;
+    max-height: 64.91px;
+    /* z-index: 12; */
+    padding: 5px;
+    font-size: 0.8rem;
+    padding: 12px;
+    transition: 0.5s;
+    transform: translateX(-350px);
+    z-index: 2;
+    color: white;
+}
+.card2active{
+    transform: translateX(0px);
+}
+    /* --小卡區右方照片-- */
+.area3downpic{
+    max-width: 570px;
+    min-width: 400px;
+    background: url("../pic/跑班特色15_new.jpg") top center;
+
+}
+/* ------------特色與目標  RWD------- */
+@media screen and (max-width:1000px ){
+    .area3kv{
+        width: auto;
+    }
+    .area3 .area3downpic{
+    display: none;
+    }
+}
+
+
+
+/* -------------------------area4 學員回饋 CSS------------------------- */
+.area4{
+    margin-top: 100px;
+}
+.feedback{
+    padding: 25px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    /* border: 20px solid #EDEDED; */
+}
+.comments-container{
+    margin: 15px;
+    background-color: white;
+    border: 20px solid #EDEDED;
+
+    /* background-color: white; */
+}
+
+
+
+/* -------------------------footer CSS------------------------- */
+footer{
+    margin: 150px 0 auto;
+    background-color: #4D5057;
+    color: white;
+    font-family: 微軟正黑體,Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 150px;
+}
+.mediaicon{
+    margin-left: 150px;
+    width: 280px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+}
+footer .mediaicon{
+    width: 175px;
+    margin-bottom: 0;
+    margin-left: 30px;
+}
+
+footer .mediaicon figure{
+    margin-bottom: 0;
+    margin-left: 15px;
+
+}
+
+footer .mediaicon img{
+    width: 30px;
+    margin: 0 5px;
+}
+footer .contactinfo{
+    margin-right: 150px;
+}
+/* -----------footer的RWD--------- */
+@media screen and (max-width:850px){
+    footer{
+        flex-direction: column;
+    }
+    footer .mediaicon{
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 0;
+        margin: 0 auto 25px;
+    }
+    .mediaicon figure{
+        justify-content: center;
+    }
+    footer .contactinfo{
+        justify-content: center;
+        margin: auto auto;
+    }
+}/* footer RWD 結束 */
+

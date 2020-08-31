@@ -1,0 +1,432 @@
+
+        /* --============================整體元素==============================-- */
+        .body{
+            box-sizing: border-box;  
+            width: 1280px;
+            /* height:3000px; */
+        }
+        
+        h1,h2,h3,h4,h5,h6,p,blockquote,form,fieldset{margin:0;}
+        h1{font-size:2.55rem;}  /*32pt，42px*/
+        h2{font-size:2.3rem;}  /*28pt， 37px，*/
+        h3{font-size:1.5rem;}  /*18pt，24px*/
+        h4{font-size:1.2rem;}  /*14pt，19px*/
+        h5{font-size:1rem;}  /*12pt，16px*/
+        h6{font-size:0.8rem;}  /*10pt，13px*/
+        p{font-size:1.125rem;}  /*13.5pt，18px*/
+        
+        .container{
+            background-color: white;
+            margin: 0 auto;
+            font-family: 微軟正黑體,Arial, Helvetica, sans-serif;
+        }
+        /* --============================共用元素==============================-- */
+        
+        /*-----頁籤-----*/
+        .tab{
+            width: 300px;
+            height:auto ;
+            background-color: white;
+            text-align: center;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 0px 0px 25px 0px;
+        }
+        
+        .tabh2{
+            display: inline-block;
+            font-size: 2.3rem;
+            color: #4D5057;
+            margin: 0 0;
+        }
+        
+        .tabline{
+            width: 40px;
+            height: 5px;
+            border-radius: 2px;
+            margin: 0 auto;
+            background-color: #4D5057;
+        }   /*--頁籤結束--*/
+        /* --============================細項==============================-- */
+        /* -------------------------header CSS------------------------- */
+        header{
+            right: 0;     /*滿版設定*/
+            left: 0;
+            padding:0px 100px 30px 100px;
+            height: 60px;
+            background-color: #046ABB;
+            margin: 0 auto;
+            font-family: 微軟正黑體,Arial, Helvetica, sans-serif;  
+            position: fixed;   /*加了外掛後置頂*/
+            top: 0;           
+            z-index: 99;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.25);
+            margin-bottom: 50px;
+        }
+        
+        .logo{
+            width: 180px;
+            height: 35.12px;
+            cursor: pointer;
+        }
+        /*-----選單------*/
+        .mainmenu{
+            flex-grow: 1;
+            /* padding-top: 5px; */
+            margin-left: 30px;
+        }
+        .mainmenu ul{
+            display: flex;
+        }
+        .mainmenu ul li{
+            display: block;
+            margin: 15px;
+        }
+        .mainmenu ul li a{
+            text-decoration: none;
+            color:white;
+        }
+        .mainmenu ul li a:active{
+            color:#046ABB;
+        }
+        .mainmenu ul li a:hover{
+            color:#77CD28;
+        }
+        /*-----註冊登入------*/
+        .login{           /* 登入和購物車的母容器 */
+            width: 120px;
+            height: 45px;
+            margin-right: -30px;
+            padding-top: 10px;
+            cursor: pointer;
+            display: flex;
+            flex-shrink: 0;
+        }
+        .loginpic{           /* 登入的母容器 */
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            border:2px solid #4D5057;
+            flex-shrink: 0;
+            margin-left: 10px;
+        }
+        
+        .loginpic img{        /* 登入照片本身 */
+            width: 200%;
+            margin: 0 0 0 -15px;
+        }
+        
+        .cart{      /* 購物車照片本身 */
+            margin-left: -30px;
+        }
+        
+        .loginmobile{
+            max-width:  40px;
+            max-height: 40px;
+            margin: 0 10px;
+            padding-top: 10px;
+            cursor: pointer;
+        }
+        .loginmobile img{
+            width: 100%;
+            display: none;
+        }
+                /* -------------------------第一個頁籤 CSS------------------------- */
+        .firsttab{
+            padding-top: 110px;
+        }
+                /* -------------------------area1 info個人小卡 CSS------------------------- */
+        .cardarea{
+            width: 800px;
+            height: 200px;
+            background-color: #046ABB;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 30px;
+            margin: 0 auto;
+            color: white;
+        }
+        /* ---------------------------左方區容器------------- */
+        .cardarea-left{
+            /* width: 500px; */
+            display: flex;
+            /* justify-content: space-evenly; */
+        }
+        
+        /* -------資料-------- */
+        .card1{
+            width: 160px;
+            height: 170px;
+            /* background-color: tan; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 2px solid white;
+            margin-right: 20px;
+        }
+        .infopic{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border-radius: 50%;
+            border: 5px solid #4D5057;
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.2);
+        }
+        .infopic img{
+            object-position: center;
+            margin-left: -30px;
+            width: 200%;
+        }
+        .picchange{
+            visibility: collapse;
+            transition: 1s;
+        }
+        .infopic:hover .picchange{
+            transform: scale(1.1);
+            visibility: visible;
+            width:100%;
+            height:100%;
+            background: url("../svg/camera-solid_new.svg") center center;
+            background-color:rgba(77, 80, 87, 0.5);
+            overflow: hidden;
+            position: absolute;
+            top:0%;
+            left: 0%;
+        }
+        .card1box{
+            max-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items:center;
+        }
+        .card1box h5{
+            margin-top: 10px;
+            width: 150px;
+            height: 30px;
+            /* background-color: tomato; */
+            z-index: 5;
+            text-align: center;
+            line-height: 1.6rem;
+            padding: 0 auto;
+        }
+        
+        /* ---------------小卡目標區-母容器*/
+        .cardgoal{
+            /* border: 3px solid #ccc; */
+            height: 170px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            position: relative;
+        
+        }
+        /* 小卡目標 title*/
+        .cardtextup{
+            /* border:2px solid #4D5057; */
+            display: flex;
+            position: relative;
+        }
+        .cardtext{
+            font-size: 1.5rem;
+            z-index: 4;
+            position: relative;
+            /* color: white; */
+        }
+        .cardtab{
+            width: 180px;
+            height: 20px;
+            background-color: #4D5057;
+            z-index: 3;
+            position: absolute;
+            top: 43%;
+            left: 7%;
+        }
+        /* 小卡目標 text*/
+        .cardtextdown{
+            max-width: 300px;
+            max-height: 50;
+            font-size: 1rem;
+        }
+        
+        
+        /* ---------------------------右方區容器------------- */
+        .cardarea-right{
+            /* width: 300px; */
+            height: 170px;
+            box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.2);
+        }
+        .cardarea-right img{
+            height: 100%;
+            /* width: 120%; */
+            /* object-fit: cover; */
+        }
+        /* ---------------個人小卡 RWD------------- */
+        @media screen and (max-width:850px){
+            .cardarea{
+                width: 100%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+            }
+            .cardarea-right{
+                display: none;
+            }
+        }/* -------個人小卡 RWD  結束-------- */
+        
+        
+            /* -------------------------area2 頁籤 CSS------------------------- */
+        
+        .area2{ 
+            margin: 50px auto 0;
+            max-width:950px; 
+            height:700px;
+        }
+        
+                                    /* -------頁籤css---- */
+        .area2 .rwdup ul{ 
+            /* display:block;  */
+            display: flex;
+            justify-content:first baseline;
+            margin:0;
+            padding: 0;
+            list-style:none;
+            /* margin-left: -50px; */
+        }
+        .tab-title{
+            list-style:none;
+        }
+        .area2 .rwdup ul li{ 
+            display:inline-block;
+            width: 120px; 
+            height: 40px;
+            /* vertical-align:top; */
+            display: flex;
+            align-items: center;
+            font-family:'微軟正黑體'; 
+            margin:0 1px -1px 0 ; 
+            border:2px solid #046ABB;  
+            line-height:25px; 
+            background:white;
+            padding:0 15px;
+            list-style:none; 
+            box-sizing:border-box;
+        }
+        .area2 .rwdup ul li a{ 
+            color:#000; 
+            text-decoration:none;
+            margin: 0 auto;
+        }
+        /* 預設頁籤藍底設定 */
+        #defult{
+            background-color: #046ABB;
+        }
+        #defult a{
+            color: white;
+        }
+        
+            /* -------------------------area3 頁籤主頁 CSS------------------------- */
+        .area3 .tab-inner{ 
+            clear:both; 
+            color:#000; 
+            padding:15px; 
+            /* height:700px;    JQ 外掛 行事曆的高度是611px */
+            background-color: #046ABB;
+        }
+        .rwdup .tab-inner{
+            max-width: 950px;
+            /* height: 200px; */
+        }
+        
+        
+        
+        @media screen and (max-width: 768px){
+        .area2 .rwdup .tab-title{
+                display:flex;
+                flex-direction: column;
+                max-width: 768px;
+        }
+        .area2 .rwdup ul li{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .area3 {
+                display:flex;
+                flex-direction: column;
+            }
+        } /* ＲＷＤ設定結束 */
+        
+        
+        
+        
+        
+        
+        
+        
+                /* -------------------------footer CSS------------------------- */
+        footer{
+            margin: 150px 0 auto;
+            background-color: #4D5057;
+            color: white;
+            font-family: 微軟正黑體,Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            padding: 35px 150px;
+        }
+        .mediaicon{
+            margin-left: 150px;
+            width: 280px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-grow: 1;
+        }
+        footer .mediaicon{
+            width: 175px;
+            margin-bottom: 0;
+            margin-left: 30px;
+        }
+        
+        footer .mediaicon figure{
+            margin-bottom: 0;
+            margin-left: 15px;
+        
+        }
+        
+        footer .mediaicon img{
+            width: 30px;
+            margin: 0 5px;
+        }
+        footer .contactinfo{
+            margin-right: 30px;
+        }
+        /* -----------footer的RWD--------- */
+        @media screen and (max-width:850px){
+            footer{
+                flex-direction: column;
+            }
+            footer .mediaicon{
+                width: 300px;
+                display: flex;
+                flex-direction: row;
+                flex-shrink: 0;
+                margin: 0 auto 25px;
+            }
+            .mediaicon figure{
+                justify-content: center;
+            }
+            footer .contactinfo{
+                justify-content: center;
+                margin: auto auto;
+            }
+        }/* footer RWD 結束 */
+        

@@ -1,0 +1,509 @@
+/* --============================整體元素==============================-- */
+
+.body{
+    box-sizing: border-box;   
+}
+
+h1,h2,h3,h4,h5,h6,p,blockquote,form,fieldset{margin:0;}
+h1{font-size:2.55rem;}  /*32pt，42px*/
+h2{font-size:2.3rem;}  /*28pt， 37px，*/
+h3{font-size:1.5rem;}  /*18pt，24px*/
+h4{font-size:1.2rem;}  /*14pt，19px*/
+h5{font-size:1rem;}  /*12pt，16px*/
+h6{font-size:0.8rem;}  /*10pt，13px*/
+p{font-size:1.125rem;}  /*13.5pt，18px*/
+
+.container{
+    background-color: white;
+    margin: 0 auto;
+    font-family: 微軟正黑體,Arial, Helvetica, sans-serif;
+}
+/* --============================共用元素==============================-- */
+
+/*-----頁籤-----*/
+.tab{
+    width: 300px;
+    height:auto ;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0px 0px 25px 0px;
+}
+
+.tabh2{
+    display: inline-block;
+    font-size: 2.3rem;
+    color: #4D5057;
+    margin: 0 0;
+}
+
+.tabline{
+    width: 40px;
+    height: 5px;
+    border-radius: 2px;
+    margin: 0 auto;
+    background-color: #4D5057;
+}   /*--頁籤結束--*/
+
+/* --============================細項==============================-- */
+/* -------------------------area1 主視覺 CSS------------------------- */
+.area1{
+    height: 500px;
+    margin: 0 auto;
+}
+
+header{
+    right: 0;     /*滿版設定*/
+    left: 0;
+    padding:15px 100px 30px 100px;
+    height: 80px;
+    background-color:transparent;
+    /* margin-bottom: -70px; */
+    margin: 0 auto;
+    font-family: 微軟正黑體,Arial, Helvetica, sans-serif;  
+    position: fixed;   /*加了外掛後置頂*/
+    top: 0;            /*加了外掛後置頂*/
+    z-index: 6;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 200px;
+    height: 43.9px;
+    cursor: pointer;
+}
+/*-----選單------*/
+.mainmenu{
+    flex-grow: 1;
+    padding-top: 5px;
+    margin-left: 30px;
+}
+.mainmenu ul{
+    display: flex;
+}
+.mainmenu ul li{
+    display: block;
+    margin: 15px;
+}
+.mainmenu ul li a{
+    text-decoration: none;
+    color:white;
+}
+.mainmenu ul li a:active{
+    color:#046ABB;
+}
+.mainmenu ul li a:hover{
+    color:#77CD28;
+}
+/*-----註冊登入------*/
+.login{
+    max-width: 120px;
+    max-height: 40px;
+    margin-right: -30px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.login img{
+    width: 30%;
+    margin: 0 10px;
+}
+.loginmobile{
+    max-width:  40px;
+    max-height: 40px;
+    margin: 0 10px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.loginmobile img{
+    width: 100%;
+    display: none;
+}
+/* -----------滿版主視覺------- */
+.kvtext{
+    max-width: 270px;
+    padding: 25px 50px;
+    background-color: rgba(77, 80, 87, 0.7);
+    color: white;
+    font-size: 4rem;
+    line-height: 5rem;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    font-family: Bebas Neue;
+    letter-spacing: 3px;
+    /* transition: 4s 3s ; */
+}
+
+/* -------------------------area2 全方位規劃 CSS------------------------- */
+.area2{
+    padding-top: 100px;
+}
+.area2down{
+    display: flex;
+    justify-content: space-between;
+}
+.card1{
+    max-width:150px;
+    height: auto;
+}
+.card1 img{
+    max-width: 150px;
+}
+.card1 figcaption{
+    font-size: 1.5rem;
+    text-align: center;
+}
+/* --------area2 全方位規劃 RWD ---------*/
+@media screen and (max-width:840px){
+    .area2down{
+        width: 400px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: auto auto;
+    }
+    .card1{
+        margin: auto auto;
+    }
+}
+
+
+
+/* -------------------------area3 教學特色 CSS------------------------- */
+.area3{
+    padding-top: 100px;
+}
+
+
+/* ------小卡----- */
+.area3down,.area4down{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card2{
+    margin-top: 20px;
+    max-width: 511px;
+    max-height: 403px;
+    /* border:5px solid #4D5057ß ; */
+    position: relative;
+    flex-grow: 1ß;
+}
+.card2text{
+    background-color: #4D5057;
+    /* border-radius: 4px; */
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    padding: 15px 60px;
+    position: absolute;
+    right:-2%;
+    top: -5%;
+    z-index: 3;
+}
+.card2 img{
+    max-width: 476px;
+    z-index: 2;
+    padding: 0;
+}
+.card2tab{
+    width: 300px;
+    height: 19px;
+    background-color: #046ABB;
+    position: absolute;
+    bottom: -5%;
+    right: 7%;
+    z-index: 0;
+}
+/* ------解說文字----- */
+.card2right{
+    max-width: 474px;
+    max-height: 403px;
+    margin: 0;
+}
+.card2right p{
+    width: 382px;
+    padding-top: 35px;
+    margin: 0;
+}
+/* 特效 滾動到一定高度顯示 */
+#move1-1, .move1-1{
+    display: none;
+}
+.movetime {
+  animation-duration: 2.5s; /* don't forget to set a duration! */
+}
+/* -------------area3 教學特色1 RWD------------- */
+@media screen and (max-width:1200px){
+    .area3down{
+    display: flex;
+    flex-direction: column;
+                        }
+    .area4down{
+    display: flex;
+    flex-direction: column-reverse;
+                        }
+    .card2{
+        margin-top: 20px;
+    }
+    .card2right{
+        margin-top: 20px;
+    }
+    .area4{
+        padding-top: 50px;
+    }
+
+}
+
+
+
+
+/* -------------------------area4 教學特色2 CSS------------------------- */
+.area4{
+    padding-top: 100px;
+}
+@media screen and (max-width:1200px){
+    .area4{
+        padding-top: 50px;
+    }
+}
+
+
+
+/* -------------------------area5 近期開課 CSS------------------------- */
+.area5{
+    padding-top: 100px;
+}
+.area5down{
+    max-width: 1140px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.area5cardbox{
+    max-width: 1200px;
+    display: flex;
+}
+
+
+/*---------左右按鈕--------*/
+.card3leftarrow{
+    width: 50px;
+    visibility: hidden;
+}
+
+.card3rightarrow{
+    width: 50px;
+}
+
+.arrowshow{
+    visibility: visible;
+}
+
+.arrowhide{
+    visibility: hidden;
+}
+
+/*---------小卡區--------*/
+.card3{
+    width: 250px;
+    height:324px;
+    background-color: #046ABB;
+    /* border-radius: 4px; */
+    color: white;
+    padding: 12px 10px;
+    margin:0 10px;
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.2);
+    cursor:pointer;
+    transition: 0.3s;
+}
+.card3:hover{
+    transform: scale(1.1);
+}
+
+/* 報名狀態時間 */
+.card3top{
+    max-width: 100%;
+    max-height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.register-status{
+    width: 70px;
+    height: 30px;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.8rem;
+}
+#full{
+    border: none;
+    background-color: #4D5057;
+}
+
+
+/* 報名狀態時間 */
+.card3pic{
+    max-width: 230px;
+    margin-bottom: 12px;
+}
+
+
+/* 課名收藏 */
+.classtitle{
+    max-height: 24px;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+.collect{
+    max-width: 30px;
+}
+
+
+/* 時間地點CTA */
+.classdetail{              /*母容器*/
+    width: 230px;
+    height: 50px;
+    background-color: #046ABB;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* position: relative; */
+}
+.card3tab{                 /*子容器-綠標籤*/
+    width: 7px;
+    height: 50px;
+    background-color: #419B00;
+    margin-left: -10px;
+    margin-right: 0;
+    z-index: 3;
+}
+.detailbox{               /*子容器-時間地點*/
+    padding-left:10px ;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    flex-grow: 1;
+}
+.classdate,.classplace{
+    width: 110px;
+    height: 15px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.classdate p,.classplace p{
+    display: inline-block;
+    width: 110px;
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+.classdate img,.classplace img{
+    width: 15px;
+}
+.classdetail button{        /*子容器-按鈕*/
+    width: 90px;
+    height: 30px; 
+    font-size: 0.8rem;
+    background-color: #77CD28;
+    border-radius: 4px;
+    border: none;
+    display: block;
+    box-shadow: 1px 1px 4px 1.5px rgba(26, 85, 40, 0.212) inset, -1px -1px 4px 1.5px rgba(26, 85, 40, 0.212) inset;
+    outline:none;
+}
+
+.classdetail button:visited{
+    outline:none;
+    border: none;
+}
+.classdetail button:active{        
+    background-color: #4D5057;
+    color: aliceblue;
+    outline:none;
+    border: none;
+}
+/* -----------近期開課RWD---------- */
+@media screen and (max-width:1100px){
+    .area5cardbox{
+        max-width: 600px;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+}
+    .card3{
+        margin-top: 20px;
+    }
+    
+}
+
+
+/* -------------------------footer CSS------------------------- */
+footer{
+    margin: 150px 0 auto;
+    background-color: #4D5057;
+    color: white;
+    font-family: 微軟正黑體,Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 150px;
+}
+.mediaicon{
+    margin-left: 150px;
+    width: 280px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+}
+footer .mediaicon{
+    width: 175px;
+    margin-bottom: 0;
+    margin-left: 30px;
+}
+
+footer .mediaicon figure{
+    margin-bottom: 0;
+    margin-left: 15px;
+
+}
+
+footer .mediaicon img{
+    width: 30px;
+    margin: 0 5px;
+}
+footer .contactinfo{
+    margin-right: 150px;
+}
+/* -----------footer的RWD--------- */
+@media screen and (max-width:850px){
+    footer{
+        flex-direction: column;
+    }
+    footer .mediaicon{
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 0;
+        margin: 0 auto 25px;
+    }
+    .mediaicon figure{
+        justify-content: center;
+    }
+    footer .contactinfo{
+        justify-content: center;
+        margin: auto auto;
+    }
+}/* footer RWD 結束 */
+
